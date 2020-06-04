@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: stephengrider/client
+    - image: raka/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
-    - image: stephengrider/comments
+    - image: raka/comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -24,7 +24,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/event-bus
+    - image: raka/event-bus
       context: event-bus
       docker:
         dockerfile: Dockerfile
@@ -32,7 +32,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/moderation
+    - image: raka/moderation
       context: moderation
       docker:
         dockerfile: Dockerfile
@@ -40,7 +40,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/posts
+    - image: raka/posts
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -48,7 +48,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/query
+    - image: raka/query
       context: query
       docker:
         dockerfile: Dockerfile
